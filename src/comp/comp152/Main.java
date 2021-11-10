@@ -34,6 +34,10 @@ public class Main {
     var usefulData = response.body();
     System.out.println(usefulData);
     var dataParser = new Gson();
+    UniversityDataType[] parsedData = dataParser.fromJson(usefulData, UniversityDataType[].class);
+    for(var currentUniversity : parsedData){
+        System.out.println(currentUniversity);
+    }
 
 
     }
